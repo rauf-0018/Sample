@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: left 1.9s;
+}
+
+#navcar {
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: right 1.9s;
+}
+
+</style>
+</head>
+<body>
+
+<div id="navbar">
+  <img type="hidden" src="sample2.jpg" width="50%" height="50%" >
+</div>
+
+<div id="navcar">
+  <img type="hidden" src="sample4.jpg" width="50%" height="50%">
+</div>
+
+<div style="padding:15px 15px 2500px;font-size:30px;">
+  <p><b>INTERNSHIP VIA INTERNSHALA.</b></p>
+  <p>Scroll down the frame to see the effect!</p>
+  <p>Scroll to the top to hide the images.</p>
+  <p>This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text.ample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text.This is sample text. This is sample text. This is sample text. This is sample text. This is sample text. This is sample text.</p>
+</div>
+
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+    document.getElementById("navbar").style.left = "0";
+	document.getElementById("navcar").style.right = "-680px";
+  }else {
+	document.getElementById("navbar").style.left = "-5000px";
+	document.getElementById("navcar").style.right = "-5000px";
+  }
+}
+</script>
+
+</body>
+</html>
