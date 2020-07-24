@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<title>Internship Sample Webpage</title>
+<style>
+
+.p11
+{
+font-family:Impact, Charcoal, sans-serif;
+font-size:60px;
+}
+
+.p12
+{
+font-family: 'Sofia';
+font-size:20px;
+text-align:justify;
+font-weight:bold;
+border:5px solid black;
+}
+
+.mySlides{
+display:none;
+}
+
+
+</style>
+</head>
+<body background="onee.jpg">
+
+<div class="p11">
+<center><b>TITLE</b></center>
+</div>
+
+<div class="p12">
+
+Working in Microsoft Word, I often need some “junk” text to play around with, for various reasons:
+
+* I’m designing a document and don’t want to get bogged down in what the text actually says.
+
+* I’m creating a template with various paragraph styles and need to see what they will look like.
+
+* I’m creating a macro and need some text for testing purposes.
+
+* I’m trying to learn more about some feature of Microsoft Word and don’t want to practice on a real document.
+
+Microsoft Word 97, 98, 2000, and 2001 include an undocumented feature that generates all of the sample text I need. Maybe you’ll find it helpful too. To use it, type the following line into a Word document and press the ENTER key:
+
+=Rand(1,1)
+
+Word will insert the following text into your document:
+
+The quick brown fox jumps over the lazy dog.
+
+(As you probably know, this sentence includes every letter in the alphabet and is sometimes used for typing practice.)
+
+Need more than one sentence? You can specify how many sentences you need by changing the last number in the Rand statement. For example, if you needed five sentences, you could type this–
+
+=Rand(1,5)
+
+–which would produce this:
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+Need more than one paragraph? You can specify how many paragraphs you need by changing the first number in the Rand statement. For example, if you needed two paragraphs (with five sentences in each one), you could type this–
+
+=Rand(2,5)
+
+–which would produce this:
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+In other words, the first number specifies the number of paragraphs you want to insert; the second number specifies the number of sentences you want to include in those paragraphs.
+
+</div>
+
+<br><br><br><br>
+<div class="w3-content" style="max-width:800px">
+<img class="mySlides" src="sample1.jpeg" style="width:100%">
+<img class="mySlides" src="sample2.jpg" style="width:100%">
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+</script>
+
+</body>
+</html>
